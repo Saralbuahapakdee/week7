@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    char str1[50];
+    char revstr[50];
+    char *stptr = str1;
+    char *rvptr = revstr;
+    int countstr=-1;
+    int k=0;
+ 	printf("\n\n Pointer : Print a string in reverse order :\n"); 
+	printf("------------------------------------------------\n");	
+    printf(" Input a string : ");
+    scanf("%s",str1);
+    stptr+=strlen(str1);
+    for(int i=1;i<=strlen(str1);i++)
+    {
+     stptr--;
+     *rvptr = *stptr;
+     rvptr++;
+     k++;
+    }
+    *rvptr='\0';
+
+    printf(" Reverse of the string is : %s\n\n",revstr);
+    return 0;
+}
